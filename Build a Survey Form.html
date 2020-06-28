@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Build a Survey Form</title>
+
+	<style type="text/css">
+		body,html{
+			height: 100%;
+			margin: 0;
+		}
+		body{
+			background-image :linear-gradient(#9DAEE6,#75E9D6);
+			background-attachment: fixed;
+		}
+		.container{
+			background-color: white;
+			width: 500px;
+			margin: 5% auto;
+			padding: 2% 5%;
+		}
+		header{
+			text-align: center;
+			border-bottom: 1px solid grey;
+		}
+		.form-group{
+			margin-bottom: 1em;
+		}
+		#survey-form{
+			padding: 0px 5%;
+		}
+		button{
+			cursor: pointer;
+			color: white;
+			border: 1px solid #9CAFE5;
+			text-align: center;
+			background-color: #77E6D7;
+			padding: 5px 10px;
+			border-radius: 5px;
+		}
+		button:hover{
+			background-color: #9CAFE5;
+		}
+		.form-group{
+			margin-top:5%;
+		}
+		#name-label, #email-label, #number-label{
+			float: left;
+			width: 50px;
+			text-align: right;
+			padding-right: 10px;
+			display: block;
+		}
+		input[type="text"], input[type="email"], input[type="number"]{
+			width: 300px;
+		}
+		input[type="radio"]{
+			display: inline-block;
+		}
+		label{
+			display: flex;
+			align-items: center;
+			margin-bottom: 0.5rem;
+		}
+		#comment{
+			width: 100%;
+		}
+
+	</style>
+</head>
+
+<body>
+
+<div class="container">
+	<header>
+		<h1 id="title">Survey Form</h1>
+		<p id="description">Building a Survey Form</p>
+	</header>
+
+	<form id="survey-form">
+		<div class="form-group">
+			<label for="name" id="name-label">Name:</label>
+			<input type="text" name="name" id="name" placeholder="Insert your name..." required>
+		</div>
+
+		<div class="form-group">
+			<label for="email" id="email-label">Email:</label>
+			<input type="email" name="email" id="email" placeholder="Insert your Email..." required>
+		</div>
+
+		<div class="form-group">
+			<label for="number" id="number-label">Age:</label>
+			<input type="number" name="age" id="number" placeholder="Insert your age.." min="1" max="99" required>	
+		</div>
+
+		<div class="form-group">
+			<label for="dropdown">What is your current position or working experience?</label>
+			<select id="dropdown" name="currentPosition">
+				<option value="university">University Student</option>
+				<option value="5years">Less than 5 years</option>
+				<option value="moreThan5years">More than 5 years </option>
+			</select>
+		</div>
+
+		<div class="form-group">
+			<p id="radioBtn">Do you like coding?</p>
+			<label><input type="radio" name="preference" value="yes">Yes</label>
+			<label><input type="radio" name="preference" value="no">No</label>
+			<label><input type="radio" name="preference" value="neutral">Neutral</label>
+		</div>
+
+		<div class="form-group">
+			<p>Which programming language do you know?</p>
+			<label><input type="checkbox" name="programmingLanguage" value="python">Python</label>
+			<label><input type="checkbox" name="programmingLanguage" value="java">Java</label>
+			<label><input type="checkbox" name="programmingLanguage" value="ruby">Ruby</label>
+			<label><input type="checkbox" name="programmingLanguage" value="javascript">JavaScript</label>
+		</div>
+
+		<div class="form-group">
+			<p>Any Comment?</p>
+			<textarea rows="4" cols="50px" name="comment" id="comment" placeholder="Enter your comment here..."></textarea>
+		</div>
+		
+		<div class="form-group">
+			<button type="submit" id="submit">Submit</button>
+		</div>
+	</form>
+</div>
+
+</body>
+</html>
